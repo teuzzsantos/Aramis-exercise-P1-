@@ -1,0 +1,16 @@
+while True:
+    try:
+        idade = int(input("Digite sua idade: "))
+
+        if idade < 0:
+            print("A idade não pode ser negativa.")
+            continue
+
+        break
+
+    except ValueError:
+        print("Idade inválida. Digite um número inteiro.")
+
+meses = idade * 12
+
+print(f"Você possui aproximadamente {meses} meses de vida.")
