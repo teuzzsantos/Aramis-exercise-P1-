@@ -1,1 +1,24 @@
+while True:
+    nome = input("Digite seu nome: ").strip()
 
+    if nome and not nome.isdigit():
+        break
+
+    print("Nome inválido. Digite um nome válido.")
+
+while True:
+    curso = input("Digite seu curso: ").strip()
+
+    if curso and not curso.isdigit():
+        break
+
+    print("Curso inválido. Digite um curso válido.")
+
+while True:
+    try:
+        periodo = int(input("Digite seu período atual: "))
+        break
+    except ValueError:
+        print("Período inválido. Digite um número inteiro.")
+
+print(f"{nome} estuda {curso} e está no {periodo}º período.")
