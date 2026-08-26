@@ -1,0 +1,17 @@
+while True:
+    try:
+        base = float(input("Digite a base do triângulo: "))
+        altura = float(input("Digite a altura do triângulo: "))
+
+        if base <= 0 or altura <= 0:
+            print("Base e altura devem ser maiores que zero.")
+            continue
+
+        break
+
+    except ValueError:
+        print("Valor inválido. Digite apenas números.")
+
+area = (base * altura) / 2
+
+print(f"A área do triângulo é: {area:.2f}")
