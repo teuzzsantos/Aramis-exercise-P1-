@@ -1,0 +1,24 @@
+while True:
+    try:
+        preco = float(input("Digite o preço do produto: R$ "))
+        desconto = float(input("Digite o percentual de desconto: "))
+
+        if preco < 0:
+            print("O preço não pode ser negativo.")
+            continue
+
+        if desconto < 0 or desconto > 100:
+            print("O desconto deve estar entre 0% e 100%.")
+            continue
+
+        break
+
+    except ValueError:
+        print("Valor inválido. Digite apenas números.")
+
+valor_desconto = preco * (desconto / 100)
+preco_final = preco - valor_desconto
+
+print(f"Valor original: R$ {preco:.2f}")
+print(f"Desconto: R$ {valor_desconto:.2f}")
+print(f"Valor final: R$ {preco_final:.2f}")
