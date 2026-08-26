@@ -1,0 +1,17 @@
+while True:
+    try:
+        quilometros = float(input("Digite os quilômetros percorridos: "))
+        litros = float(input("Digite os litros de combustível gastos: "))
+
+        if litros <= 0:
+            print("A quantidade de litros deve ser maior que zero.")
+            continue
+
+        break
+
+    except ValueError:
+        print("Valor inválido. Digite apenas números.")
+
+consumo_medio = quilometros / litros
+
+print(f"O consumo médio foi de {consumo_medio:.2f} km/l.")
